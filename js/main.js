@@ -20,27 +20,29 @@ console.log(random);
 
 button.addEventListener("click", () => {
 
-const minNumber = 1;
-const maxNumber = 100;
-const number = (guessNumber.value);
+const number = parseInt(guessNumber.value);
 let counter = 0;
 
 if (number > random ) {
     textHint.innerHTML = "Demasiado Alto";
+    counter++;
 }
     else if (number < random ) {
     textHint.innerHTML = "Demasiado bajo";
+    counter++;
 }
     else if (number === random ) {
     textHint.innerHTML = "Has ganado campeona!!!";
-}
-    else if (number < minNumber || number > maxNumber) {
-    textHint.innerHTML = "El número debe estar entre 1 y 100";
+    counter = 0;
 }
     else if (isNaN(number)) {
     textHint.innerHTML = "Escribir un numero";
-    }
+}
+    else if (number > 100 || number < 1 ) {
+    textHint.innerHTML = "El número debe estar entre 1 y 100";
+}
 
-}); 
+textTried.innerHTML = `Numero de intentos: ${counter}`
+});
 
 
