@@ -7,23 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluacion Intermedia Francesca Bentin</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 
 <body>
     <main>
-        <h1 class="title">Adivina el Numero</h1>
-        <form action="#">
-            <label for="inputNumber">Introduce aqui tu numero</label>
-            <input class="inputNumber js-inputNumber" id="inputNumber" type="text" placeholder="numero">
-        
-            <input class="btn js-btn" type="button" value="Prueba">
-            <input class="btn-reset js-btn-reset" type="button" value="Reset">
+        <div class="border p-3">
+            <h1 class="title">Adivina el Numero</h1>
+            <form action="#">
+                <label for="inputNumber">Introduce aqui tu numero</label>
+                <input class="inputNumber js-inputNumber form-control" id="inputNumber" type="text" placeholder="numero">
 
-        </form>
+                <input class="btn btn-primary js-btn" type="button" value="Prueba">
+                <input class="btn-reset btn-danger js-btn-reset" type="button" value="Reset">
+                </form>
 
-        <p class="js-hint"> Pista: Escribe el numero y dale a Prueba</p>
-        <p class="js-tried"> Numero de intentos: 0</p>
-
+            <p class="js-hint"> Pista: Escribe el numero y dale a Prueba</p>
+            <p class="js-tried"> Numero de intentos: 0</p>
+        </div>
     </main>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>

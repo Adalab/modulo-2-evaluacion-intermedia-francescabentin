@@ -1,27 +1,18 @@
 * {
     box-sizing: border-box;
     padding: 0;
+    margin-left: 5px;
 
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 20%;
+        gap: 10px;
+        margin-bottom: 15px;
 }
 
 .title {
-    font-size: 39px;
-}
-
-.inputNumber {
-    width: 50%;
-}
-
-.btn {
-    width: 20%;
-    margin-top: 10px;
-    border-radius: 3px;
-    background-color: rgb(9, 126, 87);
-    color: white;
+    font-size: 30px;
 }
