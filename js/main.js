@@ -61,9 +61,14 @@ function compareNumber() {
 let counter = 0;
 
 function handleClickBtn() {
+    let number = parseInt(inputNumber.value);
 
+    if (!isNaN(number)) {
     compareNumber();
-    incrementNumber();
+    incrementNumber(number);
+    }
+
+    inputNumber.value = "";
    
 }
 
@@ -71,15 +76,25 @@ function handleClickBtn() {
     function resetAll() {
     counter = 0;
     random = getRandomNumber(100);
-    guessNumber.value = "";
+    inputNumber.value = "";
     writeMsg("Escribe un numero para jugar");
      textTried.innerHTML = `Numero de intentos: ${counter}`;
     }
 
+//keydown event
+
+function pressEnter(event) {
+    if (event.key === 'Enter') {
+        handleClickBtn();
+    }
+}
+
 // button event listener
 
+document.addEventListener("keydown", pressEnter);
 button.addEventListener("click", handleClickBtn);
 reset.addEventListener('click', resetAll);
+
 
 
 
